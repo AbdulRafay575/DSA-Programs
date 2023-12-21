@@ -1,5 +1,12 @@
 #include <iostream>
 
+// Custom swap function
+void customSwap(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
 // Function to perform bubble sort
 void bubbleSort(int arr[], int size) {
     for (int i = 0; i < size - 1; ++i) {
@@ -7,7 +14,7 @@ void bubbleSort(int arr[], int size) {
             // Compare adjacent elements
             if (arr[j] > arr[j + 1]) {
                 // Swap them if they are in the wrong order
-                std::swap(arr[j], arr[j + 1]);
+                customSwap(arr[j], arr[j + 1]);
             }
         }
     }
